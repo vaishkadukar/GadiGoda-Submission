@@ -79,14 +79,16 @@ const ProductTable = () => {
         <Table>
           <TableHead>
             <TableRow>
-              <TableCell className="bg-red-200">Title</TableCell>
-              <TableCell>Description</TableCell>
-              <TableCell>Price</TableCell>
-              <TableCell>Discount Percentage</TableCell>
-              <TableCell>Rating</TableCell>
-              <TableCell>Stock</TableCell>
-              <TableCell>Brand</TableCell>
-              <TableCell>Category</TableCell>
+              <TableCell className="bg-[#FFC4C4]">Title</TableCell>
+              <TableCell className="bg-[#FFC4C4]">Description</TableCell>
+              <TableCell className="bg-[#FFC4C4]">Price</TableCell>
+              <TableCell className="bg-[#FFC4C4]">
+                Discount Percentage
+              </TableCell>
+              <TableCell className="bg-[#FFC4C4]">Rating</TableCell>
+              <TableCell className="bg-[#FFC4C4]">Stock</TableCell>
+              <TableCell className="bg-[#FFC4C4]">Brand</TableCell>
+              <TableCell className="bg-[#FFC4C4]">Category</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
