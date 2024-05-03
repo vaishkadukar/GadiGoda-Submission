@@ -10,6 +10,7 @@ import Paper from "@mui/material/Paper";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import TablePagination from "@mui/material/TablePagination";
+// import { DataGrid } from "@mui/x-data-grid";
 import axios from "axios";
 import Papa from "papaparse";
 
@@ -53,7 +54,6 @@ const ProductTable = () => {
     setPage(0);
   };
   const downloadCSV = () => {
-    //kuthla theuuuuu
     const start = page * rowsPerPage;
     const end = start + rowsPerPage;
     const visibleProducts = filteredProducts.slice(start, end);
@@ -67,18 +67,19 @@ const ProductTable = () => {
   };
 
   return (
-    <div>
+    <div className="flex flex-col items-center justify-center">
       <TextField
         label="Search"
         variant="outlined"
         value={searchTerm}
         onChange={handleSearch}
+        className="pb-2"
       />
       <TableContainer component={Paper}>
         <Table>
           <TableHead>
             <TableRow>
-              <TableCell>Title</TableCell>
+              <TableCell className="bg-red-200">Title</TableCell>
               <TableCell>Description</TableCell>
               <TableCell>Price</TableCell>
               <TableCell>Discount Percentage</TableCell>
@@ -115,7 +116,7 @@ const ProductTable = () => {
         onPageChange={handleChangePage}
         onRowsPerPageChange={handleChangeRowsPerPage}
       />
-      <Button variant="contained" color="primary" onClick={handleDownloadCSV}>
+      <Button variant="contained" color="primary" onClick={downloadCSV}>
         Download CSV
       </Button>
     </div>
